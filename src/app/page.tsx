@@ -1,25 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-
 const DATASET_ID = "1537899447469477";
-
-const stats = [
-  { label: "Members", value: "12,850+" },
-  { label: "Signal Accuracy", value: "92%" },
-  { label: "Pips Gained (July)", value: "+487" },
-  { label: "Accounts Managed", value: "340+" },
-];
-
-const premiumFeatures = [
-  "VIP buy/sell signals with entry, SL & TP",
-  "24/7 account management & risk control",
-  "Weekly market outlook & technical analysis",
-  "Private group with expert mentors",
-  "Gold & crypto signal coverage",
-  "Real-time news & fundamental analysis",
-];
 
 function TelegramAvatar() {
   return (
@@ -51,37 +33,12 @@ function TelegramIcon() {
   );
 }
 
-function StatCard({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex flex-col items-center gap-0.5 bg-[var(--tg-dark)] rounded-xl py-3 px-4 min-w-[90px] flex-1">
-      <span className="text-lg font-bold text-[var(--tg-accent)]">{value}</span>
-      <span className="text-xs text-[var(--tg-secondary)]">{label}</span>
-    </div>
-  );
-}
-
-function FeatureRow({ text, index }: { text: string; index: number }) {
-  const icons = ["🎯", "🛡️", "📊", "👥", "💎", "📰"];
-  return (
-    <div className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-[var(--tg-dark)]/60 transition-colors">
-      <span className="text-lg">{icons[index]}</span>
-      <span className="text-sm text-[var(--tg-secondary)]">{text}</span>
-    </div>
-  );
-}
-
 function JoinTelegramButton() {
-  const [copied, setCopied] = useState(false);
-
-  const handleClick = () => {
-    navigator.clipboard.writeText("t.me/priceactiontrader");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
-    <button
-      onClick={handleClick}
+    <a
+      href="https://t.me/+ySgPIgsAlEY2MWE0"
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.98]"
       style={{
         background: "linear-gradient(135deg, var(--tg-blue), #00a3e0)",
@@ -90,8 +47,8 @@ function JoinTelegramButton() {
       }}
     >
       <TelegramIcon />
-      {copied ? "Username Copied!" : "Join @priceactiontrader"}
-    </button>
+      Join via Telegram
+    </a>
   );
 }
 
@@ -165,44 +122,6 @@ export default function Home() {
         </div>
 
         <div className="px-5 py-4 space-y-5">
-          <div className="bg-[var(--tg-dark)] rounded-2xl p-4 space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="text-[var(--tg-accent)] font-semibold text-sm">About</span>
-            </div>
-            <p className="text-sm text-[var(--tg-secondary)] leading-relaxed">
-              Free premium forex trading signals with{" "}
-              <span className="text-[var(--tg-accent)] font-medium">92% accuracy</span>.
-              Expert account management for serious traders. Our team of analysts provides
-              daily technical & fundamental analysis across major pairs, gold, and crypto.
-            </p>
-            <p className="text-sm text-[var(--tg-secondary)] leading-relaxed">
-              <span className="text-white font-medium">10k+ members</span> worldwide.
-              No hidden fees. Transparent track record since 2020.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2">
-            {stats.map((s) => (
-              <StatCard key={s.label} label={s.label} value={s.value} />
-            ))}
-          </div>
-
-          <div className="bg-[var(--tg-dark)] rounded-2xl p-4 space-y-2">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[var(--tg-accent)] font-semibold text-sm">
-                Premium Features
-              </span>
-              <span className="text-[10px] text-[var(--tg-gold)] bg-[var(--tg-gold)]/10 px-2 py-0.5 rounded-full font-semibold">
-                FREE
-              </span>
-            </div>
-            <div className="divide-y divide-white/[0.04]">
-              {premiumFeatures.map((f, i) => (
-                <FeatureRow key={f} text={f} index={i} />
-              ))}
-            </div>
-          </div>
-
           <div className="bg-[var(--tg-dark)] rounded-2xl p-4 space-y-3">
             <span className="text-[var(--tg-accent)] font-semibold text-sm">
               Recent Performance
