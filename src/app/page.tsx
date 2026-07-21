@@ -122,6 +122,8 @@ export default function Home() {
         </div>
 
         <div className="px-5 py-4 space-y-5">
+          <JoinTelegramButton />
+
           <div className="bg-[var(--tg-dark)] rounded-2xl p-4 space-y-3">
             <span className="text-[var(--tg-accent)] font-semibold text-sm">
               Recent Performance
@@ -179,8 +181,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <JoinTelegramButton />
 
           <div className="text-center pb-6">
             <p className="text-[10px] text-[var(--tg-secondary)]/60 leading-relaxed">
