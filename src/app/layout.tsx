@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Price Action Trader | Forex Signals & Account Management",
   description:
     "Free premium forex trading signals, account management, and expert market analysis. Join 10,000+ traders worldwide.",
+  icons: {
+    icon: "/Logo.jpeg",
+    apple: "/Logo.jpeg",
+  },
   openGraph: {
     title: "Price Action Trader | Forex Signals",
     description: "Free premium forex signals & account management",
