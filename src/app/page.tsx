@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-const DATASET_ID = "1537899447469477";
+const DATASET_ID = "1521421425967372";
 
 function TelegramAvatar() {
   return (
