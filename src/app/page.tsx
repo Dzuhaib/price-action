@@ -129,7 +129,7 @@ export default function Home() {
               <div className="flex items-center gap-1.5 text-sm">
                 <span className="text-[var(--tg-green)] text-lg">▲</span>
                 <span className="font-bold text-white">+2,340 pips</span>
-                <span className="text-[10px] text-[var(--tg-secondary)]">this year</span>
+                <span className="text-[10px] text-[var(--tg-secondary)]">this weekend</span>
               </div>
             </div>
             <div className="flex gap-1.5">
