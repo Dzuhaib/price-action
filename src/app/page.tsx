@@ -96,10 +96,7 @@ export default function Home() {
               <TelegramIcon />
               <span className="text-xs font-semibold tracking-wide uppercase">Telegram</span>
             </div>
-            <div className="flex items-center gap-1 text-[10px] text-[var(--tg-secondary)] bg-[var(--tg-dark)] px-3 py-1.5 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--tg-green)] inline-block" />
-              Dataset #{DATASET_ID}
-            </div>
+            <div className="h-7" />
           </div>
 
           <div className="flex items-center gap-5">
@@ -184,7 +181,7 @@ export default function Home() {
 
           <div className="text-center pb-6">
             <p className="text-[10px] text-[var(--tg-secondary)]/60 leading-relaxed">
-              Powered by Price Action Trader &middot; Dataset ID: {DATASET_ID}
+              Powered by Price Action Trader
             </p>
           </div>
         </div>
